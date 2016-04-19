@@ -1,0 +1,64 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+@-webkit-keyframes progressFill {
+  from {
+    background-position: right bottom;
+  }
+  to {
+    background-position: left bottom;
+  }
+}
+@-moz-keyframes progressFill {
+  from {
+    background-position: right bottom;
+  }
+  to {
+    background-position: left bottom;
+  }
+}
+@keyframes progressFill {
+  from {
+    background-position: right bottom;
+  }
+  to {
+    background-position: left bottom;
+  }
+}
+
+button,
+.button {
+  margin: 0;
+  padding: 14px 30px;
+  font-size: 20px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #fff;
+  background: transparent;
+  border: 2px solid #fff;
+  transition: all 0.3s ease 0s;
+  animation-name: ProgressFill;
+  width: 100%;
+}
+button:hover,
+.button:hover {
+  color: #F36655;
+  background: #fff;
+}
+button:focus,
+.button:focus {
+  outline: none;
+}
+button.playing,
+.button.playing {
+  /*background: linear-gradient(to right, rgba(255, 255, 255, 0.5) 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;*/
+}
+button.playing:hover,
+.button.playing:hover {
+  color: #fff;
+}
+:host {
+   display: flex;
+   height: 100px;
+   margin: 15px;
+}

@@ -6,6 +6,7 @@ import {NameListService} from '../shared/index';
 import {HomeComponent} from '../+home/index';
 import {AboutComponent} from '../+about/index';
 
+
 @Component({
   selector: 'sd-app',
   viewProviders: [NameListService],

@@ -1,13 +1,14 @@
 import {Component} from 'angular2/core';
 import {CORE_DIRECTIVES, FORM_DIRECTIVES} from 'angular2/common';
-
+import {MusicButtonComponent} from '../../components/music-button.component';
+import { ButtonCollectionComponent } from '../../components/button-collection.component';
 import {NameListService} from '../../shared/index';
 
 @Component({
   selector: 'sd-home',
   templateUrl: 'app/+home/components/home.component.html',
   styleUrls: ['app/+home/components/home.component.css'],
-  directives: [FORM_DIRECTIVES, CORE_DIRECTIVES]
+  directives: [FORM_DIRECTIVES, CORE_DIRECTIVES, ButtonCollectionComponent, MusicButtonComponent]
 })
 export class HomeComponent {
   newName: string;

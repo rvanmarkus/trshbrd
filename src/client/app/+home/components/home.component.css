@@ -1,6 +1,13 @@
 :host {
-  display: block;
-  padding: 0 16px;
+  font-family: "Lato", arial, sans-serif;
+  text-align: center;
+  color: #fff;
+  background: #F36655;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: stretch;
+  flex-wrap: wrap;
 }
 
 input {
