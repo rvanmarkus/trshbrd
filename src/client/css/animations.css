@@ -1,27 +1,4 @@
-@-webkit-keyframes progressFill {
-  from {
-    background-position: right bottom;
-  }
-  to {
-    background-position: left bottom;
-  }
-}
-@-moz-keyframes progressFill {
-  from {
-    background-position: right bottom;
-  }
-  to {
-    background-position: left bottom;
-  }
-}
-@keyframes progressFill {
-  from {
-    background-position: right bottom;
-  }
-  to {
-    background-position: left bottom;
-  }
-}
+
 .test {
 	color: red;
 }

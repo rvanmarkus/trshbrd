@@ -17,10 +17,10 @@ const isProd = ENV === 'prod';
 
 if (isProd) {
   processors.push(
-    // cssnano({
-    //   discardComments: {removeAll: true},
-    //   discardUnused: {removeAll: true},
-    // })
+    cssnano({
+      discardComments: {removeAll: true},
+      discardUnused: {removeAll: true},
+    })
   );
 }
 

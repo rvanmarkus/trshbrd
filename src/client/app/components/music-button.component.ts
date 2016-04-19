@@ -1,5 +1,5 @@
 import { Component } from 'angular2/core';
-import { Input, AfterViewInit } from 'angular2/core';
+import { Input, AfterViewInit, OnInit } from 'angular2/core';
 import { NgStyle} from 'angular2/common';
 import {Observable} from 'Rxjs/Rx';
 
@@ -20,8 +20,7 @@ interface CanPlayThroughEvent extends Event {
 	directives: [NgStyle],
 	styleUrls: ['app/components/music-button.component.css'],
 })
-export class MusicButtonComponent implements AfterViewInit {
-	@Input() label: string;
+export class MusicButtonComponent implements AfterViewInit, OnInit {
 	@Input() music: string;
 
 	duration: number = 0;
@@ -30,7 +29,7 @@ export class MusicButtonComponent implements AfterViewInit {
 	state: PlayerState;
 	player = new Audio();
 
-	constructor() {
+	ngOnInit() {
 		let playerLoadingReady = Observable.fromEvent(this.player, 'canplaythrough')
 			.first();
 
@@ -42,7 +41,6 @@ export class MusicButtonComponent implements AfterViewInit {
 		playerLoadingReady.subscribe((loadEvent : CanPlayThroughEvent) => {
 			this.duration = loadEvent.target.duration;
 		});
-
 	}
 
 	ngAfterViewInit() {
