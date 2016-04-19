@@ -4,6 +4,9 @@ declare module 'cssnano' {
     discardComments: {
       removeAll: boolean;
     };
+    discardUnused: {
+      removeAll: boolean;
+    };
   }
 
   interface ICssnano {
